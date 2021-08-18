@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -project TestOCCrash.xcodeproj -scheme TestOCCrash -sdk iphonesimulator14.5 build
+      run: xcodebuild -project TestOCCrash.xcodeproj -scheme TestOCCrash -sdk iphonesimulator11.0 build
