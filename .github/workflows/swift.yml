@@ -10,8 +10,14 @@ jobs:
   build:
 
     runs-on: macos-latest
+    strategy:
+      matrix:
+        destination: [
+          'iOS Simulator,name=iPhone 8'
+        ]
+        swift-version: [5.0]
 
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -project TestOCCrash.xcodeproj -scheme TestOCCrash -sdk iphonesimulator11.0 build
+      run: xcodebuild -project TestOCCrash.xcodeproj -scheme TestOCCrash -sdk iphonesimulator build
